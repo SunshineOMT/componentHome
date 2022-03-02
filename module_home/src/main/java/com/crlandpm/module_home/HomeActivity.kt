@@ -3,8 +3,10 @@ package com.crlandpm.module_home
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
 import com.crlandpm.module_export.ARouterTable
@@ -26,5 +28,11 @@ class HomeActivity : AppCompatActivity() {
             AServiceUtils.navigateToA("param1")
         }
         findViewById<TextView>(R.id.tv_cart_product_count).text = AServiceUtils.getTips().tips
+
+        val transaction = supportFragmentManager.beginTransaction()
+        val fragment = ARouter.getInstance().build(ARouterTable.PAth_FRAGMENT_A).navigation() as Fragment
+
+        transaction.add(R.id.fl_fragment, fragment, "tag")
+        transaction.commit()
     }
 }

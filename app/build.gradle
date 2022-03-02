@@ -41,5 +41,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation project(path: ':module_home')
     implementation 'com.github.SunshineOMT:componentCommon:1.0.1'
-
+    implementation 'com.github.SunshineOMT:componentA:1.0.5'
 }
