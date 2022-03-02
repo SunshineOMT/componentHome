@@ -20,17 +20,17 @@
         android:id="@+id/btn_go_cart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="去模块A"
         app:layout_constraintBottom_toTopOf="@id/tv_cart_product_count"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_page_name"
-        android:text="去购物车"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_page_name" />
 
     <TextView
         android:id="@+id/tv_cart_product_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="购物车商品数量"
+        android:text="模块A中获取信息"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_go_cart" />

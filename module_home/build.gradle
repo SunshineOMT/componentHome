@@ -55,5 +55,6 @@ dependencies {
 
     kapt 'com.github.hufeiyang.Android-AppLifecycleMgr:applifecycle-compiler:1.0.4'
     kapt 'com.alibaba:arouter-compiler:1.2.1'
-    implementation 'com.github.hufeiyang:Common:1.0.2'
+    implementation 'com.github.SunshineOMT:componentCommon:1.0.1'
+    implementation 'com.github.SunshineOMT:A_Export:1.0.2'
 }

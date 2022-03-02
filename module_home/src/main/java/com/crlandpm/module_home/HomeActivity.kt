@@ -3,16 +3,19 @@ package com.crlandpm.module_home
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
+import com.crlandpm.module_export.ARouterTable
+import com.crlandpm.module_export.AServiceUtils
 
 /**
  * Author: Danny Yang
  * Date: 2022/02/23/5:23 下午
  */
 
-@Route(path = "/componenthome/homeActivity")
+@Route(path = ARouterTable.PATH_A)
 class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,8 +23,8 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         findViewById<Button>(R.id.btn_go_cart).setOnClickListener {
-            ARouter.getInstance().build("/componenta/moduleaActivity").navigation()
+            AServiceUtils.navigateToA("param1")
         }
-
+        findViewById<TextView>(R.id.tv_cart_product_count).text = AServiceUtils.getTips().tips
     }
 }
